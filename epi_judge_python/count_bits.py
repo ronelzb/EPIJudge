@@ -1,9 +1,15 @@
 from test_framework import generic_test
 
 
+# Hamming weight: https://en.wikipedia.org/wiki/Hamming_weight
 def count_bits(x: int) -> int:
-    # TODO - you fill in here.
-    return 0
+    num_bits = 0
+
+    while x:
+        num_bits += 1
+        x &= x - 1
+
+    return num_bits
 
 
 if __name__ == '__main__':
