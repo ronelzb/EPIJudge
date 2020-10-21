@@ -10,8 +10,8 @@ def power(x: float, y: int) -> float:
     while y_power:
         if y_power & 1:
             result *= x
-        x *= x
-        y_power >>= 1
+        x *= x  # x to the power of 2       |
+        y_power >>= 1  # divide power by 2  | (x^y/2)^2
 
     return result
 
